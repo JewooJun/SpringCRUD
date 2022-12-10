@@ -13,6 +13,8 @@
 <body>
 
 <h1>Edit Form</h1>
+
+<%--@elvariable id="BoardVO" type="com.example"--%>
 <form:form commandName="BoardVO" method="POST" action="../editok">
 	<form:hidden path="seq"/>
 	<table id="edit">

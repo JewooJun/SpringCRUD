@@ -28,6 +28,11 @@
         var a = confirm("Really?");
         if(a) location.href='deleteok/' + id;
     }
+
+    function edit_ok(id){
+        var a = confirm("Do you want Edit?");
+        if(a) location.href='editform/' + id;
+    }
 </script>
 <link type="text/css" rel="stylesheet" href="${path}/resource/css/style.css">
   <head>
@@ -35,6 +40,7 @@
   </head>
   <body>
   <h1>Study Note</h1>
+  <a href="login/logout">Logout</a>
   <table id="list" width="90%">
   <tr>
       <th>ID</th>
@@ -53,7 +59,7 @@
           <td>${u.writer}</td>
           <td>${u.content}</td>
           <td>${u.regdate}</td>
-          <td><a href="editform/${u.seq}">Edit</a></td>
+          <td><a href="javascript:edit_ok('${u.seq}')">Edit</a></td>
           <td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
       </tr>
   </c:forEach>
